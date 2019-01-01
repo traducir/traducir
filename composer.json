@@ -1,0 +1,41 @@
+{
+    "name": "traducir/traducir",
+    "description": "The Radioactive PHP Translation package.",
+    "version": "1.0-dev",
+
+    "license": "MIT",
+    "homepage": "https://traducir.github.io",
+    "authors": [
+        {
+            "name": "Deyaa Muhammad",
+            "email": "mail@deyaa.me",
+            "homepage": "https://deyaa.me"
+        }
+    ],
+    "require": {
+        "php": "^7.1.3",
+        "guzzlehttp/guzzle": "~6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Traducir\\Traducir": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Traducir\\Traducir\\TranslatorServiceProvider"
+            ],
+            "aliases": {
+                "Translator":"Traducir\\Traducir\\TranslatorFacade"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev"
+}
